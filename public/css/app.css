@@ -1,0 +1,115 @@
+html, body {
+    background-color: #fff;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    margin: 0;
+}
+body{
+    max-width: 960px;
+    margin: 5% auto 0 auto;
+}
+h1{
+    font-size: 40px;
+    font-weight: 100;
+    text-align: center;
+    margin-bottom: 10%;
+}
+input, select{
+    transition: 0.3s;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 150px;
+    height: 27px;
+    padding-left: 5px;
+}
+select{
+    max-width: 100px;
+}
+.boutonAjouter:hover, .boutonModifier:hover{
+    background-color: #777;
+}
+.erreur{
+    border-color: red;
+}
+.cache{
+    position: absolute;
+    width: calc(100% - 100px);
+    padding-right: 100px;
+    z-index: -1;
+    opacity: 0;
+    transition: 1.5s;
+}
+.visible{
+    z-index: 0;
+    opacity: 1;
+}
+.boutonAjouter, .boutonModifier{
+    position: relative;
+    z-index: 3;
+    transition: margin-left 0.5s linear, background-color 0.2s;
+    display: inline-block;
+    cursor: pointer;
+    border: 0;
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    width: 70px;
+    margin-left: calc((100% - 80px) / 2);
+}
+.aDroite, .boutonModifier{
+    margin-left: calc((100% - 80px));
+}
+.formAjouter, #formModifier{
+    position: relative;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 696px;
+}
+#formModifier{
+    display: none;
+}
+#animaux tr{
+    transition: 0.3s;
+}
+#animaux td:first-child, #animaux th:first-child{
+    width: 20%;
+}
+#animaux td:nth-child(2), #animaux th:nth-child(2){
+    width: 70%;
+}
+#animaux td:nth-child(3), #animaux th:nth-child(3){
+    width: 10%;
+}
+#animaux{
+    text-align: left;
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+}
+#animaux .fa{
+    margin-right: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#animaux .fa:hover{
+    color: #777;
+}
+#animaux tr:first-child{
+    background-color: #ddd;
+}  
+#animaux td, #animaux th{
+    padding: 5px 10px;
+}
+.reptile{
+    background-color: #D8F6CE;
+}
+.mammifere{
+    background-color: #F6CED8;
+}
+.oiseau{
+    background-color: #CED8F6;
+}
